@@ -18,19 +18,19 @@ public class ActiveAndInactive {
 	    // Iterate for k days 
 	    while (k-- > 0) { 
 	          
-	    // Finding next values for corner cells 
-	    temp[0] = false ^ cells[1]; 
-	    temp[n - 1] = false ^ cells[n - 2]; 
-	  
-	    // Compute values of intermediate cells 
-	    // If both cells active or inactive, then  
-	    // temp[i]=0 else temp[i] = 1. 
-	    for (int i = 1; i <= n - 2; i++) 
-	        temp[i] = cells[i - 1] ^ cells[i + 1]; 
-	  
-	    // Copy temp[] to cells[] for next iteration 
-	    for (int i = 0; i < n; i++) 
-	        cells[i] = temp[i]; 
+		    // Finding next values for corner cells 
+		    temp[0] = false ^ cells[1]; 
+		    temp[n - 1] = false ^ cells[n - 2]; 
+		  
+		    // Compute values of intermediate cells 
+		    // If both cells active or inactive, then  
+		    // temp[i]=0 else temp[i] = 1. 
+		    for (int i = 1; i <= n - 2; i++) 
+		        temp[i] = cells[i - 1] ^ cells[i + 1]; 
+		  
+		    // Copy temp[] to cells[] for next iteration 
+		    for (int i = 0; i < n; i++) 
+		        cells[i] = temp[i]; 
 	    } 
 	  
 	    // count active and inactive cells 
